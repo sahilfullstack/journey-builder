@@ -37,6 +37,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I consider myself to be',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -81,8 +82,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 2,
               'section_id' => $sections['NUTRITION'],
               'data' => [
-                'title' => 'My diet includes',
+                'title' => 'My diet includes (select all that apply)',
                 'body' => '',
+                'help' => 'Dairy products are Butter milk, Butter, Cheese, Cream, Curd, Ghee, Milk Ice creams, Milk, Paneer, Whey, Yogurt.'
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -164,6 +166,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My appetite is',
                 'body' => '',
+                'help' => 'Meals means Breakfast, Lunch, 1 snack , Dinner'
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -226,6 +229,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My water consumption on a daily basis is',
                 'body' => '',
+                'help' => '1 glass = 250 ml /8 oz'
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -262,8 +266,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 5,
               'section_id' => $sections['NUTRITION'],              
               'data' => [
-                'title' => 'The drinks I tend to enjoy every day are',
+                'title' => 'The drinks I tend to enjoy every day are (select all that apply)',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -351,8 +356,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 6,
               'section_id' => $sections['NUTRITION'],
               'data' => [
-                'title' => 'The kinds of food I mostly enjoy are',
+                'title' => 'The kinds of food I mostly enjoy are (select all that apply)',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -410,6 +416,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My digestion is',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -446,8 +453,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 8,
               'section_id' => $sections['NUTRITION'],
               'data' => [
-                'title' => 'I have frequently noticed one or more of the following symptoms in my digestive tract',
+                'title' => 'I have frequently noticed one or more of the following symptoms in my digestive tract (select all that apply)',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -505,6 +513,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My bowel movements are',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -559,6 +568,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I eat out',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -605,6 +615,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My alcohol intake is',
                 'body' => '',
+                'help' => '1 drink = 360 ml beer, 120 ml of wine, 45 ml of 40% alcohols, or 30 ml of 50% alcohols'
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -667,6 +678,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I smoke',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -737,6 +749,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I access my social media networks (Facebook, WhatsApp, Instagram, Snapchat etc.)',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -784,6 +797,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My sleep pattern is',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -830,6 +844,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I wake up feeling refreshed',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -876,6 +891,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My dreams are',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -930,6 +946,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'Before going to sleep, I switch off',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -990,8 +1007,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 18,
               'section_id' => $sections['PHYSICAL ACTIVITY'],
               'data' => [
-                'title' => 'I engage in Exercise/Physical activity',
+                'title' => 'I engage in Exercise/Physical activity*',
                 'body' => '',
+                'help' => 'Recommended average time spent doing exercise is 30 – 45 mins/ day.'
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -1036,8 +1054,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 19,
               'section_id' => $sections['PHYSICAL ACTIVITY'],
               'data' => [
-                'title' => 'What form of physical activity you engage in?',
+                'title' => 'What form of physical activity you engage in? (select all that apply)',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -1141,8 +1160,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 20,
               'section_id' => $sections['PHYSICAL FEATURES'],
               'data' => [
-                'title' => 'My built is best described as',
+                'title' => 'My built is best described as (select all that apply)',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -1224,6 +1244,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My Skin texture is',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -1270,6 +1291,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My complexion is',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -1322,11 +1344,15 @@ class GANodesSeeder extends Seeder
               'identifier' => 23,
               'section_id' => $sections['PHYSICAL FEATURES'],
               'data' => [
-                'title' => 'My Hair quality can be described by',
+                'title' => 'My Hair quality can be described by (select all that apply)',
                 'body' => '',
+                'help' => '',                
               ],               
-              'linker' => [                  
-                'type' => 'select_one',
+              'linker' => [
+                'type' => 'select_many',
+                'minimum' => 1,
+                'maximum' => 9,
+                'to' => 24,
                 'selectables' => [
                   [
                     'data' => [
@@ -1410,6 +1436,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I generally',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -1472,6 +1499,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My current stress levels are',
                 'body' => '',
+                'help' => 'This is your own assessment of how you perceive your stress levels to be.'
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -1516,8 +1544,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 26,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
-                'title' => 'My source of current stress includes',
+                'title' => 'My source of current stress includes (select all that apply)',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -1599,6 +1628,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My overall emotional state has been affected by a major incidence/grief/stress',
                 'body' => '',
+                'help' => 'Death of loved one, Disappointment in a relationship, Unhappy Childhood are some of the instances which can have a lasting impact on the overall emotional state of a person.'
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -1630,6 +1660,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'Specify incident/ grief/ stress/ that has had an impact on your overall emotional state.',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'text',
@@ -1643,6 +1674,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I tend to',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -1682,6 +1714,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'When things don’t go according to my wish, I tend to',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -1734,8 +1767,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 31,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
-                'title' => 'Which of the following describe my present state of personality the best?',
+                'title' => 'Which of the following describe my present state of personality the best? (select all that apply)',
                 'body' => '',
+                'help' => 'These personality traits are not defined as assessment for any psychological disorders.'
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -1945,6 +1979,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My thought pattern on most days is',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -1991,6 +2026,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'When upset, I',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2029,6 +2065,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'In the past 3 months, I have often felt low, depressed or sad',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2067,6 +2104,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'In the past 3 months , I have anxiety attacks',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2105,6 +2143,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'In the past 3 months , I have thoughts of harming myself',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2141,8 +2180,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 37,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
-                'title' => 'I fear',
+                'title' => 'I fear (select all that apply)',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -2198,8 +2238,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 38,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
-                'title' => 'I am particular about',
+                'title' => 'I am particular about (select all that apply)',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -2265,6 +2306,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My memory is',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2303,6 +2345,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I began my menses cycle at the age of',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'number',
@@ -2316,6 +2359,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My menstrual cycle is',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2360,8 +2404,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 42,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
-                'title' => 'Usually my menstrual flow is',
+                'title' => 'Usually my menstrual flow is (select all that apply)',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -2409,8 +2454,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 43,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
-                'title' => 'I frequently experience one or more of the following symptoms before or during menses?',
+                'title' => 'I frequently experience one or more of the following symptoms before or during menses? (select all that apply)',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_many',
@@ -2540,6 +2586,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I have noticed lumps or swelling in my breasts',
                 'body' => '',
+                'help' => '',                
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2579,6 +2626,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I have white discharge complaint',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2631,11 +2679,15 @@ class GANodesSeeder extends Seeder
               'identifier' => 46,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
-                'title' => 'I have the following urinary complaints',
+                'title' => 'I have the following urinary complaints (select all that apply)',
                 'body' => '',
+                'help' => '',
               ],               
-              'linker' => [                  
-                'type' => 'select_one',
+              'linker' => [ 
+                'type' => 'select_many',
+                'minimum' => 1,
+                'maximum' => 8,
+                'to' => 47,                 
                 'selectables' => [                  
                   [
                     'data' => [
@@ -2695,8 +2747,9 @@ class GANodesSeeder extends Seeder
                   ],   
                   [
                     'data' => [
-                        'text' => 'None',
-                    'description' => null],
+                      'text' => 'None',
+                      'description' => null
+                    ],
 
                     'to' => 47,
                     'operations' => []                   
@@ -2711,6 +2764,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I am sexually active',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2742,6 +2796,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I experience the following symptoms',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2812,6 +2867,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'Since I am in pre/ post menopause, I frequently experience one or more of the following symptoms',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2898,6 +2954,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I think I might be pregnant',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2936,6 +2993,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I have had deliveries',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -2974,6 +3032,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'Number of deliveries',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'number',
@@ -2987,6 +3046,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I have had abortions',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -3025,6 +3085,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'Number of abortions',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'number',
@@ -3038,25 +3099,26 @@ class GANodesSeeder extends Seeder
               'identifier' => 55,
               'section_id' => $sections['MEDICAL HISTORY'],
               'data' => [
-                'title' => 'Do I have any history of medical illness?',
+                'title' => 'Do I have any medical history* ?',
                 'body' => '',
+                'help' => 'Includes all conditions in the past that you have been treated for and cured like any surgeries, acute infections etc)'
               ],               
               'linker' => [                  
                 'type' => 'select_one',
                 'selectables' => [
                   [
                     'data' => [
-                        'text' => 'Yes',
-                    'description' => null],
-
+                      'text' => 'Yes',
+                      'description' => null
+                    ],
                     'to' => 56,
                     'operations' => []                   
                   ],
                   [
                     'data' => [
-                        'text' => 'No',
-                    'description' => null],
-
+                      'text' => 'No',
+                      'description' => null
+                    ],
                     'to' => 57,
                     'operations' => []                   
                   ],                 
@@ -3070,6 +3132,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'Specify history of any medical illness?',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'text',
@@ -3083,6 +3146,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My current medical conditions include',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -3145,6 +3209,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'Please Specify your medical condition?',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'text',
@@ -3158,6 +3223,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I am allergic to',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -3236,7 +3302,7 @@ class GANodesSeeder extends Seeder
                   ],   
                    [
                     'data' => [
-                        'text' => 'Nono',
+                        'text' => 'None',
                     'description' => null],
 
                     'to' => 60,
@@ -3260,6 +3326,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'My direct blood* relatives have or had the following medical conditions',
                 'body' => '',
+                'help' => 'Direct Blood Relative: A blood relative is anyone who shares a common ancestor with you e.g. Father, Mother, Siblings, Grandparents.'
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -3416,8 +3483,9 @@ class GANodesSeeder extends Seeder
               'identifier' => 61,
               'section_id' => $sections['MEDICAL HISTORY'],
               'data' => [
-                'title' => 'Currently, I am taking the following medications',
+                'title' => 'Currently, I am taking the following medications (select all that apply)',
                 'body' => '',
+                'help' => '',
               ],               
               'linker' => [                  
                 'type' => 'select_many',
