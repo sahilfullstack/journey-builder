@@ -43,7 +43,7 @@
                                   <button type="submit" class="btn btn-primary btn-lg btn-block">Start</button>
                                 </form>  
                                 <br>
-                                <p style="text-align: -webkit-center;">Already a member ? <a href="{{ route('tree.journey', $tree->slug) }}" class="btn">Continue <i class="fas fa-chevron-right fa-fw"></i></a></p>            
+                                <p style="text-align: -webkit-center;">Already a member ?<a href="{{ route('tree.journey', $tree->slug) }}"> Continue</a></p>            
 
                                 <!-- <a href="{{ route('user.onboard', $tree) }}" class="btn btn-primary btn-lg btn-block">START <i class="fas fa-chevron-right fa-fw"></i></a> -->
                             </div>
