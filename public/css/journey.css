@@ -17316,3 +17316,11 @@ a.disabled {
   display: block;
 }
 
+.black-color {
+  color: black !important;
+}
+
+.grey-color {
+  color: grey !important;
+}
+

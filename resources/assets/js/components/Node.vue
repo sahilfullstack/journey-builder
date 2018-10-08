@@ -21,6 +21,7 @@
                     <linker--weight v-if="this.node.linker.type == 'weight'" :linker="this.node.linker" v-bind:value="value" v-on="$listeners"></linker--weight>
                     <linker--height v-if="this.node.linker.type == 'height'" :linker="this.node.linker" v-bind:value="value" v-on="$listeners"></linker--height>
                     <linker--months v-if="this.node.linker.type == 'months'" :linker="this.node.linker" v-bind:value="value" v-on="$listeners"></linker--months>
+                    <linker--biometrics v-if="this.node.linker.type == 'biometrics'" :linker="this.node.linker" v-bind:value="value" v-on="$listeners"></linker--biometrics>
                 </div>
 
                 <label v-if="this.node.data.help != ''" class="help-style">*{{this.node.data.help}}</label>

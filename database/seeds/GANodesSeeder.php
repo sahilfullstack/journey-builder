@@ -76,7 +76,7 @@ class GANodesSeeder extends Seeder
                   ],
                 ]                  
               ]
-            ],
+            ],         
             [
               'tree_id' => $trees['ga'],
               'identifier' => 2,
@@ -3705,74 +3705,88 @@ class GANodesSeeder extends Seeder
                 ]                  
               ]
             ],
-           [
+            [
             'tree_id' => $trees['ga'],
             'identifier' => 62,
             'section_id' => $sections['PERSONAL'],
             'data' => [
-              'title' => 'What is your name ?',
+              'title' => 'Please give some personal information?',
               'body' => '',
+              'help' => '',
             ],               
             'linker' => [                  
-              'type' => 'full_name',
-              'to' => 63              
+              'type' => 'biometrics',
+              'to' => 2              
             ]
           ],
+          //  [
+          //   'tree_id' => $trees['ga'],
+          //   'identifier' => 62,
+          //   'section_id' => $sections['PERSONAL'],
+          //   'data' => [
+          //     'title' => 'What is your name ?',
+          //     'body' => '',
+          //   ],               
+          //   'linker' => [                  
+          //     'type' => 'full_name',
+          //     'to' => 63              
+          //   ]
+          // ],
+          // [
+          //   'tree_id' => $trees['ga'],
+          //   'identifier' => 63,
+          //   'section_id' => $sections['PERSONAL'],
+          //   'data' => [
+          //     'title' => 'What is your phone number?',
+          //     'body' => '',
+          //   ],               
+          //   'linker' => [                  
+          //     'type' => 'number',
+          //     'to' => 64              
+          //   ]
+          // ],
+          // [
+          //   'tree_id' => $trees['ga'],
+          //   'identifier' => 64,
+          //   'section_id' => $sections['PERSONAL'],
+          //   'data' => [
+          //     'title' => 'What is your Date of Birth?',
+          //     'body' => '',
+          //   ],               
+          //   'linker' => [                  
+          //     'type' => 'date',
+          //     'to' => 65              
+          //   ]
+          // ],
+          // [
+          //   'tree_id' => $trees['ga'],
+          //   'identifier' => 65,
+          //   'section_id' => $sections['PERSONAL'],
+          //   'data' => [
+          //     'title' => 'What is your height?',
+          //     'body' => '',
+          //   ],               
+          //   'linker' => [                  
+          //     'type' => 'height',
+          //     'to' => 66              
+          //   ]
+          // ],          
+          // [
+          //   'tree_id' => $trees['ga'],
+          //   'identifier' => 66,
+          //   'section_id' => $sections['PERSONAL'],
+          //   'data' => [
+          //     'title' => 'What is your weight?',
+          //     'body' => '',
+          //   ],               
+          //   'linker' => [                  
+          //     'type' => 'weight',
+          //     'to' => 67              
+          //   ]
+          // ],
           [
             'tree_id' => $trees['ga'],
             'identifier' => 63,
-            'section_id' => $sections['PERSONAL'],
-            'data' => [
-              'title' => 'What is your phone number?',
-              'body' => '',
-            ],               
-            'linker' => [                  
-              'type' => 'number',
-              'to' => 64              
-            ]
-          ],
-          [
-            'tree_id' => $trees['ga'],
-            'identifier' => 64,
-            'section_id' => $sections['PERSONAL'],
-            'data' => [
-              'title' => 'What is your Date of Birth?',
-              'body' => '',
-            ],               
-            'linker' => [                  
-              'type' => 'date',
-              'to' => 65              
-            ]
-          ],
-          [
-            'tree_id' => $trees['ga'],
-            'identifier' => 65,
-            'section_id' => $sections['PERSONAL'],
-            'data' => [
-              'title' => 'What is your height?',
-              'body' => '',
-            ],               
-            'linker' => [                  
-              'type' => 'height',
-              'to' => 66              
-            ]
-          ],
-          [
-            'tree_id' => $trees['ga'],
-            'identifier' => 66,
-            'section_id' => $sections['PERSONAL'],
-            'data' => [
-              'title' => 'What is your weight?',
-              'body' => '',
-            ],               
-            'linker' => [                  
-              'type' => 'weight',
-              'to' => 67              
-            ]
-          ],
-          [
-            'tree_id' => $trees['ga'],
-            'identifier' => 67,
             'section_id' => null,
             'data' => [
               'title' => 'Thank You!',
