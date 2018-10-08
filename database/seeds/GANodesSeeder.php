@@ -103,7 +103,7 @@ class GANodesSeeder extends Seeder
                   [
                     'data' => [
                         'text' => 'Dairy Products',
-                        'description' => ''
+                        'description' => null
                     ],
                     'to' => 3,
                     'operations' => []                   
