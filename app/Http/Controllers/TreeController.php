@@ -14,4 +14,11 @@ class TreeController extends Controller
         
         return view('trees.show', compact('tree'));
     }
+
+    public function getJourney(Request $request, $slug)
+    {
+        $tree = Tree::whereSlug($slug)->first();
+        
+        return view('trees.journey', compact('tree'));
+    }
 }

@@ -14,14 +14,18 @@
 Route::get('/o', function () {
     return view('onboard');
 });
+
 Route::get('/o2', function () {
     return view('onboard2');
 });
 
 
+Route::get('/t/{slug}/journey', ['as' => 'tree.journey', 'uses' => 'TreeController@getJourney']);
+
 // Route::get('/t/{slug}', ['as' => 'user.onboard', 'uses' => 'UserController@onboard']);
 Route::get('/t/{slug}', ['as' => 'tree.show', 'uses' => 'TreeController@show']);
-Route::get('/t/{tree}/onboard', ['as' => 'user.onboard', 'uses' => 'UserController@onboard']);
+Route::post('/t/{tree}/onboard', ['as' => 'user.onboard', 'uses' => 'UserController@onboard']);
+Route::post('/t/{tree}/user', ['as' => 'user.existing', 'uses' => 'UserController@getByEmail']);
 
 
 Route::get('/journeys/{journey}', ['as' => 'journey.continue', 'uses' => 'JourneyController@continue']);

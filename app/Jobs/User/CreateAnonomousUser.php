@@ -12,12 +12,16 @@ class CreateAnonomousUser
 {
     use Dispatchable, Queueable;
 
+    protected $email;
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct() {}
+    public function __construct($email) 
+    {
+        $this->email = $email;
+    }
 
     /**
      * Execute the job.
@@ -26,7 +30,9 @@ class CreateAnonomousUser
      */
     public function handle(UserRepo $userRepo)
     {       
-        $userModel = new User([]);
+        $userModel = new User([
+            'email' => $this->email
+        ]);
 
         return $userRepo->store($userModel);
     }

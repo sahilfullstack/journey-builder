@@ -26,25 +26,18 @@
                                 <p>This health form is developed by experts from western & traditional alternate medicine systems like Ayurveda, Homeopathy & Naturopathy to ensure a comprehensive understanding of your body & mind.</p>
                                 <span style="font-size: .9em; font-style: italic;">This form will take about 3-4 minutes of your time</span>                                
                                 <hr>
-                                <form  role="form" method="post" action="{{ route('user.onboard', $tree) }}">
+                                <form  role="form" method="post" action="{{ route('user.existing', $tree) }}">
                                 {!! csrf_field() !!}
                                   <div class="form-group">
                                     <label for="exampleInputEmail1">Email address</label>
                                     <input type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Enter email">
                                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                                  </div>
-                                  <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" name="accept">
-                                    <label class="form-check-label" for="exampleCheck1">I have read and understood She Matters Consent document, I agree to participate in the study</label>
-                                  </div>
-                                    <div class="error" style="color: #e74c3c !important; font-style: italic" >
+                                  </div>                                 
+                                    <div class="error" style="color: #e74c3c !important; text-align:center" >
                                       {{{ $errors->first() }}}
                                     </div>
                                   <button type="submit" class="btn btn-primary btn-lg btn-block">Start</button>
-                                </form>  
-                                <br>
-                                <p style="text-align: -webkit-center;">Already a member ? <a href="{{ route('tree.journey', $tree->slug) }}" class="btn">Continue <i class="fas fa-chevron-right fa-fw"></i></a></p>            
-
+                                </form>                                
                                 <!-- <a href="{{ route('user.onboard', $tree) }}" class="btn btn-primary btn-lg btn-block">START <i class="fas fa-chevron-right fa-fw"></i></a> -->
                             </div>
                         </div>
