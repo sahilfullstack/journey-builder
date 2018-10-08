@@ -32,7 +32,7 @@ Vue.component('linker--months', require('./components/LinkerMonths.vue'));
  * Icons
  */
 import { library, dom } from '@fortawesome/fontawesome-svg-core'
-import { faChevronLeft, faChevronRight, faCheckCircle, faAngleDoubleLeft, faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight, faCheckCircle, faAngleDoubleLeft, faAngleDoubleRight, faInfo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 dom.watch();
@@ -42,6 +42,7 @@ library.add(
 	faCheckCircle,
 	faAngleDoubleLeft,
 	faAngleDoubleRight,
+	faInfo,
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

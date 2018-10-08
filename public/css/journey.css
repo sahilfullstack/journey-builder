@@ -17251,9 +17251,15 @@ a.disabled {
 }
 
 .description-style {
-  color: grey;
+  color: blue;
   font-style: italic;
   font-size: .6em;
+}
+
+.help-style {
+  color: blue;
+  font-style: italic;
+  font-size: .9em;
 }
 
 /* The checkbox-container */

@@ -22,6 +22,8 @@
                     <linker--height v-if="this.node.linker.type == 'height'" :linker="this.node.linker" v-bind:value="value" v-on="$listeners"></linker--height>
                     <linker--months v-if="this.node.linker.type == 'months'" :linker="this.node.linker" v-bind:value="value" v-on="$listeners"></linker--months>
                 </div>
+
+                <label v-if="this.node.data.help != ''" class="help-style">*{{this.node.data.help}}</label>
             </div>
         </div>
       </section>

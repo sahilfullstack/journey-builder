@@ -103,7 +103,7 @@ class GANodesSeeder extends Seeder
                   [
                     'data' => [
                         'text' => 'Dairy Products',
-                        'description' => 'Dairy products are Butter milk, Butter, Cheese, Cream, Curd, Ghee, Milk Ice creams, Milk, Paneer, Whey, Yogurt.'
+                        'description' => ''
                     ],
                     'to' => 3,
                     'operations' => []                   
@@ -1551,7 +1551,7 @@ class GANodesSeeder extends Seeder
               'linker' => [                  
                 'type' => 'select_many',
                 'minimum' => 1,
-                'maximum' => 8,
+                'maximum' => 9,
                 'to' => 27,
                 'selectables' => [
                   [
@@ -1613,6 +1613,14 @@ class GANodesSeeder extends Seeder
                   [
                     'data' => [
                         'text' => 'Relationship',
+                        'description' => null
+                    ],
+                    'to' => 27,
+                    'operations' => []                   
+                  ], 
+                  [
+                    'data' => [
+                        'text' => 'None',
                         'description' => null
                     ],
                     'to' => 27,
@@ -2865,12 +2873,15 @@ class GANodesSeeder extends Seeder
               'identifier' => 49,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
-                'title' => 'Since I am in pre/ post menopause, I frequently experience one or more of the following symptoms',
+                'title' => 'Since I am in pre/ post menopause, I frequently experience one or more of the following symptoms (can select multiple)',
                 'body' => '',
                 'help' => '',
               ],               
               'linker' => [                  
-                'type' => 'select_one',
+                'type' => 'select_many',
+                'minimum' => 1,
+                'maximum' => 9,
+                'to' => 50,
                 'selectables' => [
                   [
                     'data' => [
@@ -3221,12 +3232,15 @@ class GANodesSeeder extends Seeder
               'identifier' => 59,
               'section_id' => $sections['MEDICAL HISTORY'],
               'data' => [
-                'title' => 'I am allergic to',
+                'title' => 'I am allergic to (can select multiple)',
                 'body' => '',
                 'help' => '',
               ],               
               'linker' => [                  
-                'type' => 'select_one',
+                'type' => 'select_many',
+                'minimum' => 1,
+                'maximum' => 11,
+                'to' => 60,
                 'selectables' => [
                   [
                     'data' => [
@@ -3324,12 +3338,15 @@ class GANodesSeeder extends Seeder
               'identifier' => 60,
               'section_id' => $sections['MEDICAL HISTORY'],
               'data' => [
-                'title' => 'My direct blood* relatives have or had the following medical conditions',
+                'title' => 'My direct blood* relatives have or had the following medical conditions (can select multiple)',
                 'body' => '',
                 'help' => 'Direct Blood Relative: A blood relative is anyone who shares a common ancestor with you e.g. Father, Mother, Siblings, Grandparents.'
               ],               
               'linker' => [                  
-                'type' => 'select_one',
+                'type' => 'select_many',
+                'minimum' => 1,
+                'maximum' => 18,
+                'to' => 61,
                 'selectables' => [
                   [
                     'data' => [

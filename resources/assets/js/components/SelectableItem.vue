@@ -1,18 +1,11 @@
 <template>      
     <div style="margin-bottom: 5%;">
-        <label class="checkbox-container">
-            <div class="card" v-if="this.image != null">
-                <img class="card-img-top" width="400" :src="this.image">
-                <div class="card-body d-flex align-items-center">
-                    <p class="m-0">{{this.text}}</p>
-                </div>              
-            </div>
-            <div v-if="this.image == null">
-                {{this.text}}
-            </div>
+        <label class="checkbox-container">           
+            {{this.text}}
+            <a class="btn btn-back" @click="showDescription" v-if="this.description != null"><i class="fas fa-info fa-1x"></i></a>
             <input :checked="this.selected ? true : false" @change="toggle" type="checkbox">
             <span class="checkmark"></span>
-            <label v-if="this.description != null" class="description-style">*{{this.description}}</label>
+            <label v-if="this.is_description_shown == true" class="description-style">*{{this.description}}</label>
         </label>
     </div>
 </template>
@@ -44,7 +37,8 @@
         },
         data() {
             return {
-                selected: this.isSelected
+                selected: this.isSelected,
+                is_description_shown: false,
             }
         },
         methods: {
@@ -55,6 +49,15 @@
                 } else {
                     this.$emit('selected', this.value);
                 }
+            },
+            showDescription() {  
+                // preventing toggle method to call
+                event.preventDefault();              
+                if(this.is_description_shown == true) {
+                    this.is_description_shown = false;
+                } else {
+                    this.is_description_shown = true;
+                }               
             }
         }
     }
