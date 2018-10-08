@@ -14,10 +14,10 @@
         <section class="main container-fluid">
             <div class="row node-area">
                 <section class="col-sm-6 offset-sm-3">
-                    <div class="question">
+                    <div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <img style="margin:0;" src="/images/shematters-logo-color.png" alt="SheMatters" id="icon">
+                                <img style="margin-left:0;margin-bottom:0;"  src="/images/shematters-logo-color.png" alt="SheMatters" id="icon">
                                 <span>Be healthy, naturally</span>
                                 <br>
                                 <h2>{{ $tree->name }}</h2>
