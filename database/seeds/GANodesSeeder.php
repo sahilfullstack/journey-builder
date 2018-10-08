@@ -3712,6 +3712,7 @@ class GANodesSeeder extends Seeder
             'data' => [
               'title' => 'What is your name ?',
               'body' => '',
+              'help' => '',                
             ],               
             'linker' => [                  
               'type' => 'full_name',
@@ -3725,6 +3726,7 @@ class GANodesSeeder extends Seeder
             'data' => [
               'title' => 'What is your phone number?',
               'body' => '',
+              'help' => '',                
             ],               
             'linker' => [                  
               'type' => 'number',
@@ -3738,6 +3740,7 @@ class GANodesSeeder extends Seeder
             'data' => [
               'title' => 'What is your Date of Birth?',
               'body' => '',
+              'help' => '',                
             ],               
             'linker' => [                  
               'type' => 'date',
