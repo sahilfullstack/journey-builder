@@ -53,7 +53,7 @@ class GANodesSeeder extends Seeder
                   [
                     'data' => [
                         'text' => 'Usually Healthy, falling sick occasionally',
-                        'description' => 'once in 3-4 months'
+                        'description' => 'falling sick, once in 3-4 months'
                     ],
                     'to' => 2,
                     'operations' => []                   
@@ -61,7 +61,7 @@ class GANodesSeeder extends Seeder
                   [
                     'data' => [
                         'text' => 'Falling sick frequently',
-                        'description' => 'more than once a month to every month'
+                        'description' => 'falling sick, more than once a month to every month'
                     ],
                     'to' => 2,
                     'operations' => []                   
@@ -89,7 +89,7 @@ class GANodesSeeder extends Seeder
               'linker' => [                  
                 'type' => 'select_many',
                 'minimum' => 1,
-                'maximum' => 8,
+                'maximum' => 9,
                 'to' => 3,
                 'selectables' => [
                   [
@@ -150,7 +150,15 @@ class GANodesSeeder extends Seeder
                   ],       
                   [
                     'data' => [
-                        'text' => 'Wheat',
+                        'text' => 'Cereals',
+                        'description' => null
+                    ],
+                    'to' => 3,
+                    'operations' => []                   
+                  ], 
+                  [
+                    'data' => [
+                        'text' => 'Pulses',
                         'description' => null
                     ],
                     'to' => 3,
@@ -647,23 +655,23 @@ class GANodesSeeder extends Seeder
                   [
                     'data' => [
                         'text' => 'Heavy',
-                        'description' => 'more than 4 drinks/occasion'
+                        'description' => ' > 4 / occasion'
                     ],
                     'to' => 12,
                     'operations' => []                   
                   ],
                   [
                     'data' => [
-                        'text' => 'Not Anymore',
-                        'description' => 'quit more than 6 months ago',
+                        'text' => 'Not Anymore (quit more than 6 months ago)',
+                        'description' => null,
                     ],
                     'to' => 12,
                     'operations' => []                   
                   ],
                   [
                     'data' => [
-                        'text' => 'Not Anymore',
-                        'description' => 'quit less than 6 months ago',
+                        'text' => 'Not Anymore (quit less than 6 months ago)',
+                        'description' => null,
                     ],
                     'to' => 12,
                     'operations' => []                   
@@ -693,16 +701,16 @@ class GANodesSeeder extends Seeder
                   ],
                   [
                     'data' => [
-                        'text' => 'Everyday',
-                        'description' => 'less than 5 cigarettes',
+                        'text' => 'Everyday (less than 5 cigarettes)',
+                        'description' => null,
                     ],
                     'to' => 13,
                     'operations' => []                   
                   ],
                   [
                     'data' => [
-                        'text' => 'Everyday',
-                        'description' => 'more than 5 cigarettes',
+                        'text' => 'Everyday (more than 5 cigarettes)',
+                        'description' => null,
                     ],
                     'to' => 13,
                     'operations' => []                   
@@ -717,16 +725,16 @@ class GANodesSeeder extends Seeder
                   ],
                   [
                     'data' => [
-                        'text' => 'Not anymore',
-                        'description' => 'Quit more than 1 year ago',
+                        'text' => 'Not anymore (Quit more than 1 year ago)',
+                        'description' => null,
                     ],
                     'to' => 13,
                     'operations' => []                   
                   ],
                   [
                     'data' => [
-                        'text' => 'Not anymore',
-                        'description' => 'Quit less than 1 year ago',
+                        'text' => 'Not anymore (Quit less than 1 year ago)',
+                        'description' => null,
                     ],
                     'to' => 13,
                     'operations' => []                   
@@ -734,7 +742,7 @@ class GANodesSeeder extends Seeder
                   [
                     'data' => [
                         'text' => 'Other Tobacco products',
-                        'description' => 'Hukkah, Paan etc.',
+                        'description' => 'Hukka, chewable tobacco including Gutka, Pan etc.',
                     ],
                     'to' => 13,
                     'operations' => []                   
@@ -944,12 +952,15 @@ class GANodesSeeder extends Seeder
               'identifier' => 17,
               'section_id' => $sections['SLEEP'],
               'data' => [
-                'title' => 'Before going to sleep, I switch off',
+                'title' => 'Before going to sleep, I switch off (select all that apply)',
                 'body' => '',
                 'help' => '',                
               ],               
               'linker' => [                  
-                'type' => 'select_one',
+                'type' => 'select_many',
+                'minimum' => 1,
+                'maximum' => 6,
+                'to' => 18,
                 'selectables' => [
                   [
                     'data' => [
@@ -1009,7 +1020,7 @@ class GANodesSeeder extends Seeder
               'data' => [
                 'title' => 'I engage in Exercise/Physical activity*',
                 'body' => '',
-                'help' => 'Recommended average time spent doing exercise is 30 – 45 mins/ day.'
+                'help' => 'Assuming that average time spent doing exercise is 30 – 45 mins/ day.'
               ],               
               'linker' => [                  
                 'type' => 'select_one',
@@ -1054,7 +1065,7 @@ class GANodesSeeder extends Seeder
               'identifier' => 19,
               'section_id' => $sections['PHYSICAL ACTIVITY'],
               'data' => [
-                'title' => 'What form of physical activity you engage in? (select all that apply)',
+                'title' => 'My physical activity involves (select all that apply)',
                 'body' => '',
                 'help' => '',                
               ],               
@@ -1066,7 +1077,7 @@ class GANodesSeeder extends Seeder
                 'selectables' => [                  
                   [
                     'data' => [
-                        'text' => 'Active moment at work or home',
+                        'text' => 'Active movement at work or home',
                         'description' => null,
                     ],
                     'to' => 20,
@@ -1147,6 +1158,14 @@ class GANodesSeeder extends Seeder
                   [
                     'data' => [
                         'text' => 'None',
+                        'description' => null,
+                    ],
+                    'to' => 20,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Others',
                         'description' => null,
                     ],
                     'to' => 20,
@@ -1277,6 +1296,14 @@ class GANodesSeeder extends Seeder
                     'data' => [
                         'text' => 'Rough',
                         'description' => null,
+                    ],
+                    'to' => 22,
+                    'operations' => []                   
+                  ],    
+                  [
+                    'data' => [
+                        'text' => 'Combination',
+                        'description' => 'Oily T Zone & Dry cheeks',
                     ],
                     'to' => 22,
                     'operations' => []                   
@@ -1680,16 +1707,19 @@ class GANodesSeeder extends Seeder
               'identifier' => 29,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
-                'title' => 'I tend to',
+                'title' => 'Which of the following describe my present state of personality the best? (select all that apply)',
                 'body' => '',
-                'help' => '',                
+                'help' => 'These personality traits are not defined as assessment for any psychological disorders.'
               ],               
               'linker' => [                  
-                'type' => 'select_one',
+                'type' => 'select_many',
+                'minimum' => 1,
+                'maximum' => 28,
+                'to' => 30,
                 'selectables' => [
                   [
                     'data' => [
-                        'text' => 'Make friends easily',
+                        'text' => 'Anxious',
                         'description' => null
                     ],
                     'to' => 30,
@@ -1697,7 +1727,7 @@ class GANodesSeeder extends Seeder
                   ],
                   [
                     'data' => [
-                        'text' => 'Like to stay alone',
+                        'text' => 'Aggressive',
                         'description' => null
                     ],
                     'to' => 30,
@@ -1705,15 +1735,214 @@ class GANodesSeeder extends Seeder
                   ],
                   [
                     'data' => [
-                        'text' => 'Initially reserved',
+                        'text' => 'Calm',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ], 
+                  [
+                    'data' => [
+                        'text' => 'Careless',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Cheerful',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ], 
+                  [
+                    'data' => [
+                        'text' => 'Clingy',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Confident',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],   
+                  [
+                    'data' => [
+                        'text' => 'Creative',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Critical',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Depressed',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],           
+                  [
+                    'data' => [
+                        'text' => 'Dominating',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Excitable',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ], 
+                  [
+                    'data' => [
+                        'text' => 'Extrovert',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ], 
+                  [
+                    'data' => [
+                        'text' => 'Fearful',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Headstrong',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ], 
+                  [
+                    'data' => [
+                        'text' => 'Imaginative',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Insecure',
                         'description' => null
                     ],
                     'to' => 30,
                     'operations' => []                   
                   ],  
-                             
-                ]                  
-              ]
+                  [
+                    'data' => [
+                        'text' => 'Introvert',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],   
+                  [
+                    'data' => [
+                        'text' => 'Irritable',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],                 
+                  [
+                    'data' => [
+                        'text' => 'Jealous',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Loner',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Mild',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],           
+                  [
+                    'data' => [
+                        'text' => 'Nervous',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Organized',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ], 
+                  [
+                    'data' => [
+                        'text' => 'Perfectionist',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Reserved',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Social',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ], 
+                  [
+                    'data' => [
+                        'text' => 'Timid',
+                        'description' => null
+                    ],
+                    'to' => 30,
+                    'operations' => []                   
+                  ]
+                ]
+              ]              
             ],
             [
               'tree_id' => $trees['ga'],
@@ -1753,7 +1982,7 @@ class GANodesSeeder extends Seeder
                   ],                    
                   [
                     'data' => [
-                        'text' => 'Dont bother',
+                        'text' => 'Don\'t bother',
                         'description' => null
                     ],
                     'to' => 31,
@@ -1770,219 +1999,10 @@ class GANodesSeeder extends Seeder
                 ]                  
               ]
             ],
+
             [
               'tree_id' => $trees['ga'],
               'identifier' => 31,
-              'section_id' => $sections['EMOTIONAL WELLBEING'],
-              'data' => [
-                'title' => 'Which of the following describe my present state of personality the best? (select all that apply)',
-                'body' => '',
-                'help' => 'These personality traits are not defined as assessment for any psychological disorders.'
-              ],               
-              'linker' => [                  
-                'type' => 'select_many',
-                'minimum' => 1,
-                'maximum' => 24,
-                'to' => 32,
-                'selectables' => [
-                  [
-                    'data' => [
-                        'text' => 'Anxious',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Aggressive',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Calm',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ], 
-                  [
-                    'data' => [
-                        'text' => 'Careless',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Cheerful',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ], 
-                  [
-                    'data' => [
-                        'text' => 'Clingy',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Confident',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],   
-                  [
-                    'data' => [
-                        'text' => 'Creative',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Critical',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Depressed',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],           
-                  [
-                    'data' => [
-                        'text' => 'Dominating',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Excitable',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ], 
-                  [
-                    'data' => [
-                        'text' => 'Fearful',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Headstrong',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ], 
-                  [
-                    'data' => [
-                        'text' => 'Imaginative',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Insecure',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],   
-                  [
-                    'data' => [
-                        'text' => 'Irritable',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],                 
-                  [
-                    'data' => [
-                        'text' => 'Jealous',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Mild',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],           
-                  [
-                    'data' => [
-                        'text' => 'Nervous',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Organized',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ], 
-                  [
-                    'data' => [
-                        'text' => 'Perfectionist',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Reserved',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ], 
-                  [
-                    'data' => [
-                        'text' => 'Timid',
-                        'description' => null
-                    ],
-                    'to' => 32,
-                    'operations' => []                   
-                  ]
-                ]
-              ]              
-            ],
-            [
-              'tree_id' => $trees['ga'],
-              'identifier' => 32,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
                 'title' => 'My thought pattern on most days is',
@@ -1995,9 +2015,9 @@ class GANodesSeeder extends Seeder
                   [
                     'data' => [
                         'text' => 'Erratic',
-                        'description' => null
+                        'description' => 'Unpredictable, wandering, changing frequently'
                     ],
-                    'to' => 33,
+                    'to' => 32,
                     'operations' => []                   
                   ],
                   [
@@ -2005,23 +2025,23 @@ class GANodesSeeder extends Seeder
                         'text' => 'Normal',
                         'description' => null
                     ],
-                    'to' => 33,
+                    'to' => 32,
                     'operations' => []                   
                   ],  
                   [
                     'data' => [
                         'text' => 'Negative',
-                        'description' => null
+                        'description' => 'anticipating the worst possible outcomes of every situation'
                     ],
-                    'to' => 33,
+                    'to' => 32,
                     'operations' => []                   
                   ],   
                    [
                     'data' => [
                         'text' => 'Obsessive',
-                        'description' => null
+                        'description' => 'persistent thought that constantly preoccupies one’s mind'
                     ],
-                    'to' => 33,
+                    'to' => 32,
                     'operations' => []                   
                   ]            
                 ]                  
@@ -2029,7 +2049,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 33,
+              'identifier' => 32,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
                 'title' => 'When upset, I',
@@ -2044,7 +2064,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'like to share my stress with someone',
                         'description' => null
                     ],
-                    'to' => 34,
+                    'to' => 33,
                     'operations' => []                   
                   ],
                   [
@@ -2052,7 +2072,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'tend to bottle it up & keep thinking about it',
                         'description' => null
                     ],
-                    'to' => 34,
+                    'to' => 33,
                     'operations' => []                   
                   ],
                   [
@@ -2060,7 +2080,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'manage on my own & move on',
                         'description' => null
                     ],
-                    'to' => 34,
+                    'to' => 33,
                     'operations' => []                   
                   ]              
                 ]                  
@@ -2068,7 +2088,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 34,
+              'identifier' => 33,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
                 'title' => 'In the past 3 months, I have often felt low, depressed or sad',
@@ -2083,7 +2103,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Never',
                         'description' => null
                     ],
-                    'to' => 35,
+                    'to' => 34,
                     'operations' => []                   
                   ],
                   [
@@ -2091,7 +2111,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Nearly Every day',
                         'description' => null
                     ],
-                    'to' => 35,
+                    'to' => 34,
                     'operations' => []                   
                   ],
                   [
@@ -2099,7 +2119,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Several Days in a month',
                         'description' => null
                     ],
-                    'to' => 35,
+                    'to' => 34,
                     'operations' => []                   
                   ]              
                 ]                  
@@ -2107,7 +2127,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 35,
+              'identifier' => 34,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
                 'title' => 'In the past 3 months , I have anxiety attacks',
@@ -2122,7 +2142,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Never',
                         'description' => null
                     ],
-                    'to' => 36,
+                    'to' => 35,
                     'operations' => []                   
                   ],
                   [
@@ -2130,7 +2150,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Nearly Every day',
                         'description' => null
                     ],
-                    'to' => 36,
+                    'to' => 35,
                     'operations' => []                   
                   ],
                   [
@@ -2138,7 +2158,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Several Days in a month',
                         'description' => null
                     ],
-                    'to' => 36,
+                    'to' => 35,
                     'operations' => []                   
                   ]              
                 ]                  
@@ -2146,7 +2166,7 @@ class GANodesSeeder extends Seeder
             ], 
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 36,
+              'identifier' => 35,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
                 'title' => 'In the past 3 months , I have thoughts of harming myself',
@@ -2161,7 +2181,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Never',
                         'description' => null
                     ],
-                    'to' => 37,
+                    'to' => 36,
                     'operations' => []                   
                   ],
                   [
@@ -2169,7 +2189,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Nearly Every day',
                         'description' => null
                     ],
-                    'to' => 37,
+                    'to' => 36,
                     'operations' => []                   
                   ],
                   [
@@ -2177,7 +2197,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Several Days in a month',
                         'description' => null
                     ],
-                    'to' => 37,
+                    'to' => 36,
                     'operations' => []                   
                   ]              
                 ]                  
@@ -2185,7 +2205,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 37,
+              'identifier' => 36,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
                 'title' => 'I fear (select all that apply)',
@@ -2195,15 +2215,15 @@ class GANodesSeeder extends Seeder
               'linker' => [                  
                 'type' => 'select_many',
                 'minimum' => 1,
-                'maximum' => 5,
-                'to' => 38,
+                'maximum' => 7,
+                'to' => 37,
                 'selectables' => [
                   [
                     'data' => [
                         'text' => 'Animal',
                         'description' => null
                     ],
-                    'to' => 38,
+                    'to' => 37,
                     'operations' => []                   
                   ],
                   [
@@ -2211,7 +2231,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Darkness',
                         'description' => null
                     ],
-                    'to' => 38,
+                    'to' => 37,
                     'operations' => []                   
                   ],           
                   [
@@ -2219,7 +2239,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Height',
                         'description' => null
                     ],
-                    'to' => 38,
+                    'to' => 37,
                     'operations' => []                   
                   ],
                   [
@@ -2227,12 +2247,94 @@ class GANodesSeeder extends Seeder
                         'text' => 'Incurable Disease',
                         'description' => null
                     ],
-                    'to' => 38,
+                    'to' => 37,
                     'operations' => []                   
                   ],
                   [
                     'data' => [
                         'text' => 'Water',
+                        'description' => null
+                    ],
+                    'to' => 37,
+                    'operations' => []                   
+                  ],                   
+                  [
+                    'data' => [
+                        'text' => 'None',
+                        'description' => null
+                    ],
+                    'to' => 37,
+                    'operations' => []                   
+                  ],                   
+                  [
+                    'data' => [
+                        'text' => 'Any Other',
+                        'description' => null
+                    ],
+                    'to' => 37,
+                    'operations' => []                   
+                  ],                  
+                ]                  
+              ]
+            ],
+            [
+              'tree_id' => $trees['ga'],
+              'identifier' => 37,
+              'section_id' => $sections['EMOTIONAL WELLBEING'],
+              'data' => [
+                'title' => 'I am particular about (select all that apply)',
+                'body' => '',
+                'help' => '',                
+              ],               
+              'linker' => [                  
+                'type' => 'select_many',
+                'minimum' => 1,
+                'maximum' => 6,
+                'to' => 38,
+                'selectables' => [
+                  [
+                    'data' => [
+                        'text' => 'Order',
+                        'description' => null
+                    ],
+                    'to' => 38,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Cleanliness',
+                        'description' => null
+                    ],
+                    'to' => 38,
+                    'operations' => []                   
+                  ],           
+                  [
+                    'data' => [
+                        'text' => 'Personal appearance',
+                        'description' => null
+                    ],
+                    'to' => 38,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Spending money',
+                        'description' => null
+                    ],
+                    'to' => 38,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Time',
+                        'description' => null
+                    ],
+                    'to' => 38,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'None',
                         'description' => null
                     ],
                     'to' => 38,
@@ -2244,72 +2346,6 @@ class GANodesSeeder extends Seeder
             [
               'tree_id' => $trees['ga'],
               'identifier' => 38,
-              'section_id' => $sections['EMOTIONAL WELLBEING'],
-              'data' => [
-                'title' => 'I am particular about (select all that apply)',
-                'body' => '',
-                'help' => '',                
-              ],               
-              'linker' => [                  
-                'type' => 'select_many',
-                'minimum' => 1,
-                'maximum' => 6,
-                'to' => 39,
-                'selectables' => [
-                  [
-                    'data' => [
-                        'text' => 'Order',
-                        'description' => null
-                    ],
-                    'to' => 39,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Cleanliness',
-                        'description' => null
-                    ],
-                    'to' => 39,
-                    'operations' => []                   
-                  ],           
-                  [
-                    'data' => [
-                        'text' => 'Personal appearance',
-                        'description' => null
-                    ],
-                    'to' => 39,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Spending money',
-                        'description' => null
-                    ],
-                    'to' => 39,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Time',
-                        'description' => null
-                    ],
-                    'to' => 39,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'None',
-                        'description' => null
-                    ],
-                    'to' => 39,
-                    'operations' => []                   
-                  ],                  
-                ]                  
-              ]
-            ],
-            [
-              'tree_id' => $trees['ga'],
-              'identifier' => 39,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'My memory is',
@@ -2324,7 +2360,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Average',
                         'description' => 'can recollect short & long term memories with efforts',
                     ],
-                    'to' => 40,
+                    'to' => 39,
                     'operations' => []                   
                   ],
                   [
@@ -2332,7 +2368,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Good',
                         'description' => 'can recollect short & long term memories without efforts',
                     ],
-                    'to' => 40,
+                    'to' => 39,
                     'operations' => []                   
                   ],
                   [
@@ -2340,7 +2376,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Poor',
                         'description' => 'cannot recollect short & long term memories easily',
                     ],
-                    'to' => 40,
+                    'to' => 39,
                     'operations' => []                   
                   ],                         
                 ]                  
@@ -2348,7 +2384,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 40,
+              'identifier' => 39,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'I began my menses cycle at the age of',
@@ -2357,12 +2393,12 @@ class GANodesSeeder extends Seeder
               ],               
               'linker' => [                  
                 'type' => 'number',
-                'to' => 41              
+                'to' => 40              
               ]
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 41,
+              'identifier' => 40,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'My menstrual cycle is',
@@ -2377,7 +2413,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Regular',
                         'description' => null
                     ],
-                    'to' => 42,
+                    'to' => 41,
                     'operations' => []                   
                   ],
                   [
@@ -2385,7 +2421,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Irregular',
                     'description' => null],
 
-                    'to' => 42,
+                    'to' => 41,
                     'operations' => []                   
                   ],
                   [
@@ -2393,7 +2429,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Stopped',
                     'description' => null],
 
-                    'to' => 42,
+                    'to' => 43,
                     'operations' => []                   
                   ],  
                   [
@@ -2409,7 +2445,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 42,
+              'identifier' => 41,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'Usually my menstrual flow is (select all that apply)',
@@ -2420,14 +2456,14 @@ class GANodesSeeder extends Seeder
                 'type' => 'select_many',
                 'minimum' => 1,
                 'maximum' => 4,
-                'to' => 43,
+                'to' => 42,
                 'selectables' => [
                   [
                     'data' => [
                         'text' => 'Light',
                     'description' => null],
 
-                    'to' => 43,
+                    'to' => 42,
                     'operations' => []                   
                   ],
                   [
@@ -2435,7 +2471,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Moderate',
                     'description' => null],
 
-                    'to' => 43,
+                    'to' => 42,
                     'operations' => []                   
                   ],           
                   [
@@ -2443,7 +2479,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Heavy',
                     'description' => null],
 
-                    'to' => 43,
+                    'to' => 42,
                     'operations' => []                   
                   ],
                   [
@@ -2451,7 +2487,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'With clots',
                     'description' => null],
 
-                    'to' => 43,
+                    'to' => 42,
                     'operations' => []                   
                   ],                             
                 ]                  
@@ -2459,7 +2495,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 43,
+              'identifier' => 42,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'I frequently experience one or more of the following symptoms before or during menses? (select all that apply)',
@@ -2469,15 +2505,15 @@ class GANodesSeeder extends Seeder
               'linker' => [                  
                 'type' => 'select_many',
                 'minimum' => 1,
-                'maximum' => 14,
-                'to' => 44,
+                'maximum' => 15,
+                'to' => 43,
                 'selectables' => [
                   [
                     'data' => [
                         'text' => 'Back Pain',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ],
                   [
@@ -2485,7 +2521,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Bloating',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ],           
                   [
@@ -2493,7 +2529,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Breast Tenderness',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ],
                   [
@@ -2501,7 +2537,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Change In appetites',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ], 
                   [
@@ -2509,7 +2545,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Constipation',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ], 
                   [
@@ -2517,7 +2553,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Cramps',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ],
                   [
@@ -2525,7 +2561,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Depression',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ],
                   [
@@ -2533,7 +2569,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Diarrhea',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ],   
                   [
@@ -2541,7 +2577,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Fatigue',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ],   
                   [
@@ -2549,7 +2585,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Headache',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ],
                   [
@@ -2557,7 +2593,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Insomnia',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ],
                   [
@@ -2565,7 +2601,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Irritability',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ],                 
                   [
@@ -2573,7 +2609,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Nausea',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
                     'operations' => []                   
                   ],    
                   [
@@ -2581,7 +2617,15 @@ class GANodesSeeder extends Seeder
                         'text' => 'Palpitation',
                     'description' => null],
 
-                    'to' => 44,
+                    'to' => 43,
+                    'operations' => []                   
+                  ],     
+                  [
+                    'data' => [
+                        'text' => 'None',
+                    'description' => null],
+
+                    'to' => 43,
                     'operations' => []                   
                   ],               
                 ]                  
@@ -2589,7 +2633,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 44,
+              'identifier' => 43,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'I have noticed lumps or swelling in my breasts',
@@ -2604,7 +2648,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Yes',
                     'description' => null],
 
-                    'to' => 45,
+                    'to' => 44,
                     'operations' => []                   
                   ],
                   [
@@ -2612,7 +2656,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'No',
                     'description' => null],
 
-                    'to' => 45,
+                    'to' => 44,
                     'operations' => []                   
                   ],
                   [
@@ -2620,7 +2664,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Not sure',
                     'description' => null],
 
-                    'to' => 45,
+                    'to' => 44,
                     'operations' => []                   
                   ],  
                            
@@ -2629,7 +2673,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 45,
+              'identifier' => 44,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'I have white discharge complaint',
@@ -2644,7 +2688,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Yes',
                     'description' => null],
 
-                    'to' => 46,
+                    'to' => 45,
                     'operations' => []                   
                   ],
                   [
@@ -2652,7 +2696,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'No',
                     'description' => null],
 
-                    'to' => 46,
+                    'to' => 45,
                     'operations' => []                   
                   ],
                   [
@@ -2660,7 +2704,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Throughout the month',
                     'description' => null],
 
-                    'to' => 46,
+                    'to' => 45,
                     'operations' => []                   
                   ],  
                   [
@@ -2668,7 +2712,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Before menses',
                     'description' => null],
 
-                    'to' => 46,
+                    'to' => 45,
                     'operations' => []                   
                   ],     
                   [
@@ -2676,7 +2720,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'After menses',
                     'description' => null],
 
-                    'to' => 46,
+                    'to' => 45,
                     'operations' => []                   
                   ],            
                 ]                  
@@ -2684,7 +2728,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 46,
+              'identifier' => 45,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'I have the following urinary complaints (select all that apply)',
@@ -2695,14 +2739,14 @@ class GANodesSeeder extends Seeder
                 'type' => 'select_many',
                 'minimum' => 1,
                 'maximum' => 8,
-                'to' => 47,                 
+                'to' => 46,                 
                 'selectables' => [                  
                   [
                     'data' => [
                         'text' => 'Burning',
                     'description' => null],
 
-                    'to' => 47,
+                    'to' => 46,
                     'operations' => []                   
                   ],  
                   [
@@ -2710,7 +2754,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Increased frequency',
                     'description' => null],
 
-                    'to' => 47,
+                    'to' => 46,
                     'operations' => []                   
                   ],   
                   [
@@ -2718,7 +2762,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Incontinence',
                     'description' => null],
 
-                    'to' => 47,
+                    'to' => 46,
                     'operations' => []                   
                   ],
                   [
@@ -2726,7 +2770,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Involuntary',
                     'description' => null],
 
-                    'to' => 47,
+                    'to' => 46,
                     'operations' => []                   
                   ],
                   [
@@ -2734,7 +2778,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Foul - Smelling',
                     'description' => null],
 
-                    'to' => 47,
+                    'to' => 46,
                     'operations' => []                   
                   ],
                   [
@@ -2742,7 +2786,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Painful',
                     'description' => null],
 
-                    'to' => 47,
+                    'to' => 46,
                     'operations' => []                   
                   ],
                   [
@@ -2750,7 +2794,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Urgency',
                     'description' => null],
 
-                    'to' => 47,
+                    'to' => 46,
                     'operations' => []                   
                   ],   
                   [
@@ -2759,7 +2803,7 @@ class GANodesSeeder extends Seeder
                       'description' => null
                     ],
 
-                    'to' => 47,
+                    'to' => 46,
                     'operations' => []                   
                   ],        
                 ]                  
@@ -2767,7 +2811,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 47,
+              'identifier' => 46,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'I am sexually active',
@@ -2782,7 +2826,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Yes',
                     'description' => null],
 
-                    'to' => 48,
+                    'to' => 47,
                     'operations' => []                   
                   ],
                   [
@@ -2790,7 +2834,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'No',
                     'description' => null],
 
-                    'to' => 49,
+                    'to' => 48,
                     'operations' => []                   
                   ],
                              
@@ -2799,7 +2843,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 48,
+              'identifier' => 47,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'I experience the following symptoms',
@@ -2814,7 +2858,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Difficulty achieving an orgasm',
                     'description' => null],
 
-                    'to' => 49,
+                    'to' => 48,
                     'operations' => []                   
                   ],
                   [
@@ -2822,7 +2866,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Difficulty becoming aroused',
                     'description' => null],
 
-                    'to' => 49,
+                    'to' => 48,
                     'operations' => []                   
                   ],
                   [
@@ -2830,7 +2874,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Lack of interest',
                     'description' => null],
 
-                    'to' => 49,
+                    'to' => 48,
                     'operations' => []                   
                   ],  
                   [
@@ -2838,7 +2882,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Lack of lubrication',
                     'description' => null],
 
-                    'to' => 49,
+                    'to' => 48,
                     'operations' => []                   
                   ],  
                   [
@@ -2846,7 +2890,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Pain or discomfort during sexual activity',
                     'description' => null],
 
-                    'to' => 49,
+                    'to' => 48,
                     'operations' => []                   
                   ],
                   [
@@ -2854,12 +2898,102 @@ class GANodesSeeder extends Seeder
                         'text' => 'None',
                     'description' => null],
 
-                    'to' => 49,
+                    'to' => 48,
                     'operations' => []                   
                   ],  
                   [
                     'data' => [
                         'text' => 'All',
+                    'description' => null],
+
+                    'to' => 48,
+                    'operations' => []                   
+                  ]            
+                ]                  
+              ]
+            ],
+            [
+              'tree_id' => $trees['ga'],
+              'identifier' => 48,
+              'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
+              'data' => [
+                'title' => 'Since I am in pre/ post menopause, I frequently experience one or more of the following symptoms (can select multiple)',
+                'body' => '',
+                'help' => '',
+              ],               
+              'linker' => [                  
+                'type' => 'select_many',
+                'minimum' => 1,
+                'maximum' => 9,
+                'to' => 49,
+                'selectables' => [
+                  [
+                    'data' => [
+                        'text' => 'Not Applicable',
+                    'description' => null],
+
+                    'to' => 49,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Change in libido',
+                    'description' => null],
+
+                    'to' => 49,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Excess Sweating',
+                    'description' => null],
+
+                    'to' => 49,
+                    'operations' => []                   
+                  ],  
+                  [
+                    'data' => [
+                        'text' => 'Fatigue',
+                    'description' => null],
+
+                    'to' => 49,
+                    'operations' => []                   
+                  ],  
+                  [
+                    'data' => [
+                        'text' => 'Hot  flushes',
+                    'description' => null],
+
+                    'to' => 49,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Insomnia',
+                    'description' => null],
+
+                    'to' => 49,
+                    'operations' => []                   
+                  ],  
+                  [
+                    'data' => [
+                        'text' => 'Mood swings',
+                    'description' => null],
+
+                    'to' => 49,
+                    'operations' => []                   
+                  ],  
+                  [
+                    'data' => [
+                        'text' => 'Vagina dryness',
+                    'description' => null],
+
+                    'to' => 49,
+                    'operations' => []                   
+                  ],  
+                  [
+                    'data' => [
+                        'text' => 'Weight gain',
                     'description' => null],
 
                     'to' => 49,
@@ -2871,96 +3005,6 @@ class GANodesSeeder extends Seeder
             [
               'tree_id' => $trees['ga'],
               'identifier' => 49,
-              'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
-              'data' => [
-                'title' => 'Since I am in pre/ post menopause, I frequently experience one or more of the following symptoms (can select multiple)',
-                'body' => '',
-                'help' => '',
-              ],               
-              'linker' => [                  
-                'type' => 'select_many',
-                'minimum' => 1,
-                'maximum' => 9,
-                'to' => 50,
-                'selectables' => [
-                  [
-                    'data' => [
-                        'text' => 'Not Applicable',
-                    'description' => null],
-
-                    'to' => 50,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Change in libido',
-                    'description' => null],
-
-                    'to' => 50,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Excess Sweating',
-                    'description' => null],
-
-                    'to' => 50,
-                    'operations' => []                   
-                  ],  
-                  [
-                    'data' => [
-                        'text' => 'Fatigue',
-                    'description' => null],
-
-                    'to' => 50,
-                    'operations' => []                   
-                  ],  
-                  [
-                    'data' => [
-                        'text' => 'Hot  flushes',
-                    'description' => null],
-
-                    'to' => 50,
-                    'operations' => []                   
-                  ],
-                  [
-                    'data' => [
-                        'text' => 'Insomnia',
-                    'description' => null],
-
-                    'to' => 50,
-                    'operations' => []                   
-                  ],  
-                  [
-                    'data' => [
-                        'text' => 'Mood swings',
-                    'description' => null],
-
-                    'to' => 50,
-                    'operations' => []                   
-                  ],  
-                  [
-                    'data' => [
-                        'text' => 'Vagina dryness',
-                    'description' => null],
-
-                    'to' => 50,
-                    'operations' => []                   
-                  ],  
-                  [
-                    'data' => [
-                        'text' => 'Weight gain',
-                    'description' => null],
-
-                    'to' => 50,
-                    'operations' => []                   
-                  ]            
-                ]                  
-              ]
-            ],
-            [
-              'tree_id' => $trees['ga'],
-              'identifier' => 50,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'I think I might be pregnant',
@@ -2975,7 +3019,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Yes',
                     'description' => null],
 
-                    'to' => 51,
+                    'to' => 50,
                     'operations' => []                   
                   ],
                   [
@@ -2983,7 +3027,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'No',
                     'description' => null],
 
-                    'to' => 51,
+                    'to' => 50,
                     'operations' => []                   
                   ],  
                   [
@@ -2991,7 +3035,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Not Applicable',
                     'description' => null],
 
-                    'to' => 51,
+                    'to' => 50,
                     'operations' => []                   
                   ],                            
                 ]                  
@@ -2999,10 +3043,10 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 51,
+              'identifier' => 50,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
-                'title' => 'I have had deliveries',
+                'title' => 'I have delivered children',
                 'body' => '',
                 'help' => '',
               ],               
@@ -3014,7 +3058,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Yes',
                     'description' => null],
 
-                    'to' => 52,
+                    'to' => 51,
                     'operations' => []                   
                   ],
                   [
@@ -3022,7 +3066,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'No',
                     'description' => null],
 
-                    'to' => 53,
+                    'to' => 52,
                     'operations' => []                   
                   ],  
                   [
@@ -3030,7 +3074,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Not Applicable',
                     'description' => null],
 
-                    'to' => 53,
+                    'to' => 52,
                     'operations' => []                   
                   ],                            
                 ]                  
@@ -3038,7 +3082,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 52,
+              'identifier' => 51,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'Number of deliveries',
@@ -3047,12 +3091,12 @@ class GANodesSeeder extends Seeder
               ],               
               'linker' => [                  
                 'type' => 'number',
-                'to' => 53          
+                'to' => 52          
               ]
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 53,
+              'identifier' => 52,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'I have had abortions',
@@ -3067,7 +3111,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Yes',
                     'description' => null],
 
-                    'to' => 54,
+                    'to' => 53,
                     'operations' => []                   
                   ],
                   [
@@ -3075,7 +3119,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'No',
                     'description' => null],
 
-                    'to' => 55,
+                    'to' => 54,
                     'operations' => []                   
                   ],  
                   [
@@ -3083,7 +3127,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Not Applicable',
                     'description' => null],
 
-                    'to' => 55,
+                    'to' => 54,
                     'operations' => []                   
                   ],                            
                 ]                  
@@ -3091,7 +3135,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 54,
+              'identifier' => 53,
               'section_id' => $sections['GYNAECOLOGICAL HISTORY'],
               'data' => [
                 'title' => 'Number of abortions',
@@ -3100,17 +3144,17 @@ class GANodesSeeder extends Seeder
               ],               
               'linker' => [                  
                 'type' => 'number',
-                'to' => 55          
+                'to' => 54          
               ]
             ],
 
 
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 55,
+              'identifier' => 54,
               'section_id' => $sections['MEDICAL HISTORY'],
               'data' => [
-                'title' => 'Do I have any medical history* ?',
+                'title' => 'My medical history* ?',
                 'body' => '',
                 'help' => 'Includes all conditions in the past that you have been treated for and cured like any surgeries, acute infections etc)'
               ],               
@@ -3122,7 +3166,7 @@ class GANodesSeeder extends Seeder
                       'text' => 'Yes',
                       'description' => null
                     ],
-                    'to' => 56,
+                    'to' => 55,
                     'operations' => []                   
                   ],
                   [
@@ -3130,7 +3174,7 @@ class GANodesSeeder extends Seeder
                       'text' => 'No',
                       'description' => null
                     ],
-                    'to' => 57,
+                    'to' => 56,
                     'operations' => []                   
                   ],                 
                 ]                  
@@ -3138,7 +3182,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 56,
+              'identifier' => 55,
               'section_id' => $sections['MEDICAL HISTORY'],
               'data' => [
                 'title' => 'Specify history of any medical illness?',
@@ -3147,12 +3191,12 @@ class GANodesSeeder extends Seeder
               ],               
               'linker' => [                  
                 'type' => 'text',
-                'to' => 57             
+                'to' => 56             
               ]
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 57,
+              'identifier' => 56,
               'section_id' => $sections['MEDICAL HISTORY'],
               'data' => [
                 'title' => 'My current medical conditions include',
@@ -3167,7 +3211,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Arthritis',
                     'description' => null],
 
-                    'to' => 59,
+                    'to' => 58,
                     'operations' => []                   
                   ],
                   [
@@ -3175,7 +3219,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Diabetes',
                     'description' => null],
 
-                    'to' => 59,
+                    'to' => 58,
                     'operations' => []                   
                   ],
                   [
@@ -3183,7 +3227,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Hypertension',
                     'description' => null],
 
-                    'to' => 59,
+                    'to' => 58,
                     'operations' => []                   
                   ],   
                   [
@@ -3191,7 +3235,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'PCOD',
                     'description' => null],
 
-                    'to' => 59,
+                    'to' => 58,
                     'operations' => []                   
                   ],   
                   [
@@ -3199,7 +3243,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Thyroid',
                     'description' => null],
 
-                    'to' => 59,
+                    'to' => 58,
                     'operations' => []                   
                   ],
                   [
@@ -3207,7 +3251,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Others',
                     'description' => null],
 
-                    'to' => 58,
+                    'to' => 57,
                     'operations' => []                   
                   ],      
               ]
@@ -3215,7 +3259,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 58,
+              'identifier' => 57,
               'section_id' => $sections['MEDICAL HISTORY'],
               'data' => [
                 'title' => 'Please Specify your medical condition?',
@@ -3224,12 +3268,12 @@ class GANodesSeeder extends Seeder
               ],               
               'linker' => [                  
                 'type' => 'text',
-                'to' => 59             
+                'to' => 58             
               ]
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 59,
+              'identifier' => 58,
               'section_id' => $sections['MEDICAL HISTORY'],
               'data' => [
                 'title' => 'I am allergic to (can select multiple)',
@@ -3240,14 +3284,14 @@ class GANodesSeeder extends Seeder
                 'type' => 'select_many',
                 'minimum' => 1,
                 'maximum' => 11,
-                'to' => 60,
+                'to' => 59,
                 'selectables' => [
                   [
                     'data' => [
                         'text' => 'Drug',
                     'description' => null],
 
-                    'to' => 60,
+                    'to' => 59,
                     'operations' => []                   
                   ],
                   [
@@ -3255,7 +3299,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Dust',
                     'description' => null],
 
-                    'to' => 60,
+                    'to' => 59,
                     'operations' => []                   
                   ],  
                   [
@@ -3263,7 +3307,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Egg',
                     'description' => null],
 
-                    'to' => 60,
+                    'to' => 59,
                     'operations' => []                   
                   ],
                   [
@@ -3271,7 +3315,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Fish',
                     'description' => null],
 
-                    'to' => 60,
+                    'to' => 59,
                     'operations' => []                   
                   ],    
                    [
@@ -3279,7 +3323,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Milk(lactose)',
                     'description' => null],
 
-                    'to' => 60,
+                    'to' => 59,
                     'operations' => []                   
                   ],                      
                   [
@@ -3287,7 +3331,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Nuts',
                     'description' => null],
 
-                    'to' => 60,
+                    'to' => 59,
                     'operations' => []                   
                   ],                      
                   [
@@ -3295,7 +3339,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Pollen',
                     'description' => null],
 
-                    'to' => 60,
+                    'to' => 59,
                     'operations' => []                   
                   ],                      
                   [
@@ -3303,7 +3347,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Soy',
                     'description' => null],
 
-                    'to' => 60,
+                    'to' => 59,
                     'operations' => []                   
                   ],                      
                   [
@@ -3311,7 +3355,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Wheat(Gluten)',
                     'description' => null],
 
-                    'to' => 60,
+                    'to' => 59,
                     'operations' => []                   
                   ],   
                    [
@@ -3319,7 +3363,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'None',
                     'description' => null],
 
-                    'to' => 60,
+                    'to' => 59,
                     'operations' => []                   
                   ],   
                    [
@@ -3327,7 +3371,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Don’t know',
                     'description' => null],
 
-                    'to' => 60,
+                    'to' => 59,
                     'operations' => []                   
                   ],                  
                 ]                  
@@ -3335,7 +3379,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 60,
+              'identifier' => 59,
               'section_id' => $sections['MEDICAL HISTORY'],
               'data' => [
                 'title' => 'My direct blood* relatives have or had the following medical conditions (can select multiple)',
@@ -3346,14 +3390,14 @@ class GANodesSeeder extends Seeder
                 'type' => 'select_many',
                 'minimum' => 1,
                 'maximum' => 18,
-                'to' => 61,
+                'to' => 60,
                 'selectables' => [
                   [
                     'data' => [
                         'text' => 'Allergies',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],
                   [
@@ -3361,7 +3405,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Anxiety',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],  
                   [
@@ -3369,7 +3413,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Arthritis',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],              
                   [
@@ -3377,7 +3421,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Autoimmune Disorder',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],
                   [
@@ -3385,7 +3429,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Cancer',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],  
                   [
@@ -3393,7 +3437,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Diabetes',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],
                   [
@@ -3401,7 +3445,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Dementia',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],              
                   [
@@ -3409,7 +3453,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Depression',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],
                   [
@@ -3417,7 +3461,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Heart Disease',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],  
                   [
@@ -3425,7 +3469,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Hyperlipidemia',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],          
                        [
@@ -3433,7 +3477,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Hypertension',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],              
                   [
@@ -3441,7 +3485,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Infection',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],
                   [
@@ -3449,7 +3493,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Kidney Disease',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],  
                   [
@@ -3457,7 +3501,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Liver Disease',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],  
                   [
@@ -3465,7 +3509,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Stroke',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],              
                   [
@@ -3473,7 +3517,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Thyroid',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],
                   [
@@ -3481,7 +3525,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Tuberculosis',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ],  
                   [
@@ -3489,7 +3533,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'None',
                     'description' => null],
 
-                    'to' => 61,
+                    'to' => 60,
                     'operations' => []                   
                   ]
                 ]                  
@@ -3497,7 +3541,7 @@ class GANodesSeeder extends Seeder
             ],
             [
               'tree_id' => $trees['ga'],
-              'identifier' => 61,
+              'identifier' => 60,
               'section_id' => $sections['MEDICAL HISTORY'],
               'data' => [
                 'title' => 'Currently, I am taking the following medications (select all that apply)',
@@ -3508,14 +3552,14 @@ class GANodesSeeder extends Seeder
                 'type' => 'select_many',
                 'minimum' => 1,
                 'maximum' => 25,
-                'to' => 62,
+                'to' => 61,
                 'selectables' => [                 
                   [
                     'data' => [
                         'text' => 'Antacids',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],           
                   [
@@ -3523,7 +3567,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Antibiotics',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],
                   [
@@ -3531,7 +3575,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Anti-anxiety',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],                  
                   [
@@ -3539,7 +3583,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Antidepressants',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ], 
                   [
@@ -3547,7 +3591,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Anti-Diabetic',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],
                   [
@@ -3555,7 +3599,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Anti-Fungal',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],
                   [
@@ -3563,7 +3607,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Anti - Psychotic drugs',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],   
                   [
@@ -3571,7 +3615,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Ayurveda',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],    
                   [
@@ -3579,7 +3623,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Blood pressure',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],
                   [
@@ -3587,7 +3631,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Blood thinner',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],
                   [
@@ -3595,7 +3639,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Herbal',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],           
                   [
@@ -3603,7 +3647,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Homoeopathic',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],
                    [
@@ -3611,7 +3655,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Insulin',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ], 
                   [
@@ -3619,7 +3663,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Laxative',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],
                   [
@@ -3627,7 +3671,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Multivitamins',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ], 
                   [
@@ -3635,7 +3679,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Non- Steroid Anti-Inflammatory Drug',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],
                   [
@@ -3643,7 +3687,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Oral Contraceptive',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],   
                   [
@@ -3651,7 +3695,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Pain Killer',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],       
                   [
@@ -3659,7 +3703,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Sleeping pills',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ], 
                   [
@@ -3667,7 +3711,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Statin',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],
                   [
@@ -3675,7 +3719,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Steroid',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ], 
                   [
@@ -3683,7 +3727,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Thyroid',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],
                   [
@@ -3691,7 +3735,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Unani',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ], 
                    [
@@ -3699,7 +3743,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'None',
                     'description' => null],
 
-                    'to' => 62,
+                    'to' => 61,
                     'operations' => []                   
                   ],                     
                 ]                  
@@ -3707,7 +3751,7 @@ class GANodesSeeder extends Seeder
             ],
            [
             'tree_id' => $trees['ga'],
-            'identifier' => 62,
+            'identifier' => 61,
             'section_id' => $sections['PERSONAL'],
             'data' => [
               'title' => 'What is your name ?',
@@ -3716,12 +3760,12 @@ class GANodesSeeder extends Seeder
             ],               
             'linker' => [                  
               'type' => 'full_name',
-              'to' => 63              
+              'to' => 62              
             ]
           ],
           [
             'tree_id' => $trees['ga'],
-            'identifier' => 63,
+            'identifier' => 62,
             'section_id' => $sections['PERSONAL'],
             'data' => [
               'title' => 'What is your phone number?',
@@ -3730,12 +3774,12 @@ class GANodesSeeder extends Seeder
             ],               
             'linker' => [                  
               'type' => 'number',
-              'to' => 64              
+              'to' => 63              
             ]
           ],
           [
             'tree_id' => $trees['ga'],
-            'identifier' => 64,
+            'identifier' => 63,
             'section_id' => $sections['PERSONAL'],
             'data' => [
               'title' => 'What is your Date of Birth?',
@@ -3744,15 +3788,15 @@ class GANodesSeeder extends Seeder
             ],               
             'linker' => [                  
               'type' => 'date',
-              'to' => 65              
+              'to' => 64              
             ]
           ],
              [
               'tree_id' => $trees['ga'],
               'section_id' => $sections['PERSONAL'],
-              'identifier' => 65,
+              'identifier' => 64,
               'data' => [
-                'title' => 'Are you married ?',
+                'title' => 'Marital Status',
                 'body' => '',
                 'help' => '',
               ],               
@@ -3761,18 +3805,26 @@ class GANodesSeeder extends Seeder
                 'selectables' => [
                   [
                     'data' => [
-                        'text' => 'Yes',
+                        'text' => 'Single',
                         'description' => null
                     ],
-                    'to' => 66,
+                    'to' => 65,
                     'operations' => []                   
                   ],
                   [
                     'data' => [
-                        'text' => 'No',
+                        'text' => 'Married',
                         'description' => null
                     ],
-                    'to' => 66,
+                    'to' => 65,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                        'text' => 'Others',
+                        'description' => null
+                    ],
+                    'to' => 65,
                     'operations' => []                   
                   ]
                 ]                  
@@ -3780,7 +3832,7 @@ class GANodesSeeder extends Seeder
             ],  
           [
             'tree_id' => $trees['ga'],
-            'identifier' => 66,
+            'identifier' => 65,
             'section_id' => $sections['PERSONAL'],
             'data' => [
               'title' => 'Also provide us these information',
@@ -3789,7 +3841,7 @@ class GANodesSeeder extends Seeder
             ],               
             'linker' => [                  
               'type' => 'biometrics',
-              'to' => 67              
+              'to' => 66              
             ]
           ],
           // [
@@ -3815,12 +3867,12 @@ class GANodesSeeder extends Seeder
           //   ],               
           //   'linker' => [                  
           //     'type' => 'weight',
-          //     'to' => 67              
+          //     'to' => 66              
           //   ]
           // ],
           [
             'tree_id' => $trees['ga'],
-            'identifier' => 67,
+            'identifier' => 66,
             'section_id' => null,
             'data' => [
               'title' => 'Thank you for taking out time to compete this form. We truly value the information you have provided.',
