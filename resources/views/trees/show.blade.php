@@ -18,8 +18,7 @@
                         <div class="row">
                             <div class="col-sm-12 noscroll">
 
-                                <img style="margin-left:0;margin-bottom:0;" src="/images/shematters-logo-color.png" alt="SheMatters" id="icon">
-                                <span>Be healthy, naturally</span>
+                                <img style="width: 14rem;" src="/images/shematters-logo-new-1.jpg" alt="SheMatters" id="icon">
                                 <br> <br>
                                 <h2>{{ $tree->name }}</h2>
                                 <!-- <p>{{ $tree->description }}</p> -->
@@ -36,7 +35,7 @@
                                   </div>
                                   <div class="form-check">
                                     <input type="checkbox" class="form-check-input" name="accept">
-                                    <label class="form-check-label" for="exampleCheck1">I have read and understood She Matters Consent document, I agree to participate in the study</label>
+                                    <label class="form-check-label" for="exampleCheck1">I have read and understood She Matters <a href="/images/Consent_document.pdf" target="_blank">Consent document</a>, I agree to participate in the study</label>
                                   </div>
                                     <div class="error" style="color: #e74c3c !important; font-style: italic" >
                                       {{{ $errors->first() }}}

@@ -19,7 +19,8 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <h2>{{ journey.tree.name }}</h2>
-                            <p>{{ journey.tree.description }}</p>
+                                                            <p>This is a confidential health assessment form designed to provide insight into your overall health and spread awareness about the goodness of maintaining a proper lifestyle. It is not intended to diagnosis, treat, cure or prevent any disease. The form results will help in identifying the current strengths of your health and early signs of risk factors if any.</p>
+                                <p>This health form is developed by experts from western & traditional alternate medicine systems like Ayurveda, Homeopathy & Naturopathy to ensure a comprehensive understanding of your body & mind.</p>
                         </div>
                     </div>
                 </div>

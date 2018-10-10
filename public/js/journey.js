@@ -50139,6 +50139,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -50784,7 +50785,17 @@ var render = function() {
                 _c("div", { staticClass: "col-sm-12" }, [
                   _c("h2", [_vm._v(_vm._s(_vm.journey.tree.name))]),
                   _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(_vm.journey.tree.description))])
+                  _c("p", [
+                    _vm._v(
+                      "This is a confidential health assessment form designed to provide insight into your overall health and spread awareness about the goodness of maintaining a proper lifestyle. It is not intended to diagnosis, treat, cure or prevent any disease. The form results will help in identifying the current strengths of your health and early signs of risk factors if any."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "This health form is developed by experts from western & traditional alternate medicine systems like Ayurveda, Homeopathy & Naturopathy to ensure a comprehensive understanding of your body & mind."
+                    )
+                  ])
                 ])
               ])
             ])

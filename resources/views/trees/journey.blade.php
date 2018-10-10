@@ -17,7 +17,7 @@
                     <div>
                         <div class="row">
                             <div class="col-sm-12">
-                                <img style="margin-left:0;margin-bottom:0;"  src="/images/shematters-logo-color.png" alt="SheMatters" id="icon">
+                                <img style="width: 14rem;" src="/images/shematters-logo-new-1.jpg" alt="SheMatters" id="icon">
                                 <span>Be healthy, naturally</span>
                                 <br>
                                 <h2>{{ $tree->name }}</h2>
