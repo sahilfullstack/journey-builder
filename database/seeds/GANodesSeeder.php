@@ -1537,7 +1537,7 @@ class GANodesSeeder extends Seeder
                         'text' => 'Zero',                        
                         'description' => null
                     ],
-                    'to' => 26,
+                    'to' => 29,
                     'operations' => []                   
                   ],
                   [
@@ -3249,9 +3249,17 @@ class GANodesSeeder extends Seeder
                   ],
                   [
                     'data' => [
-                        'text' => 'Others',
+                        'text' => 'None',
                     'description' => null],
 
+                    'to' => 58,
+                    'operations' => []                   
+                  ],
+                  [
+                    'data' => [
+                      'text' => 'Others',
+                     'description' => null
+                    ],
                     'to' => 57,
                     'operations' => []                   
                   ],      
