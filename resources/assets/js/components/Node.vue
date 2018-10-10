@@ -22,6 +22,7 @@
                     <linker--height v-if="this.node.linker.type == 'height'" :linker="this.node.linker" v-bind:value="value" v-on="$listeners"></linker--height>
                     <linker--months v-if="this.node.linker.type == 'months'" :linker="this.node.linker" v-bind:value="value" v-on="$listeners"></linker--months>
                     <linker--biometrics v-if="this.node.linker.type == 'biometrics'" :linker="this.node.linker" v-bind:value="value" v-on="$listeners"></linker--biometrics>
+                    <linker--terminal v-if="this.node.linker.type == 'terminal'" :linker="this.node.linker" :node="this.node" :journeyId="this.journeyId" v-bind:value="value" v-on="$listeners"></linker--terminal>
                 </div>
 
                 <label v-if="this.node.data.help != ''" class="help-style">*{{this.node.data.help}}</label>
@@ -36,6 +37,10 @@
         props: {
             node: {
                 type: Object,
+                required: true
+            },
+            journeyId: {
+                type: Number,
                 required: true
             },
             value: {

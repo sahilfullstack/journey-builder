@@ -30,7 +30,7 @@ class GANodesSeeder extends Seeder
             'Thank You'                 => Section::whereTitle('Thank You')->first()->id
         ];
 
-        $nodes = [
+        $nodes = [          
             [
               'tree_id' => $trees['ga'],
               'section_id' => $sections['SELF ASSESSMENT OF HEALTH'],
@@ -1487,7 +1487,7 @@ class GANodesSeeder extends Seeder
                   ],
                   [
                     'data' => [
-                        'text' => 'Am Not sensitive to hot or cold',
+                        'text' => 'am Not sensitive to hot or cold',
                         'description' => null,
                     ],
                     'to' => 25,
@@ -2092,7 +2092,7 @@ class GANodesSeeder extends Seeder
               'identifier' => 33,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
-                'title' => 'In the past 3 months, I have often felt low, depressed or sad',
+                'title' => 'In the past 3 months, I had often felt low, depressed or sad',
                 'body' => '',
                 'help' => '',                
               ],               
@@ -2131,7 +2131,7 @@ class GANodesSeeder extends Seeder
               'identifier' => 34,
               'section_id' => $sections['EMOTIONAL WELLBEING'],
               'data' => [
-                'title' => 'In the past 3 months , I have anxiety attacks',
+                'title' => 'In the past 3 months , I had anxiety attacks',
                 'body' => '',
                 'help' => '',                
               ],               
@@ -3892,7 +3892,7 @@ class GANodesSeeder extends Seeder
               'type' => 'terminal',
               'to' => null              
             ]
-          ]
+          ]         
         ];
 
         foreach ($nodes as $node) 

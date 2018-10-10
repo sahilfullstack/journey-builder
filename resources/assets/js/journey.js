@@ -28,6 +28,7 @@ Vue.component('linker--weight', require('./components/LinkerWeight.vue'));
 Vue.component('linker--height', require('./components/LinkerHeight.vue'));
 Vue.component('linker--months', require('./components/LinkerMonths.vue'));
 Vue.component('linker--biometrics', require('./components/LinkerBiometrics.vue'));
+Vue.component('linker--terminal', require('./components/LinkerTerminal.vue'));
 
 /**
  * Icons

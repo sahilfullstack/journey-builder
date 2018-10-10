@@ -2,7 +2,7 @@
     <section class="main container-fluid">
         <div class="row  noscroll">
             <div class="col-sm-12 col-md-8 offset-md-4">
-                <img src="/images/shematters-logo-color.png" alt="SheMatters" id="icon">
+                <img src="/images/shematters-logo-new-1.jpg" alt="SheMatters" id="icon">
             </div>
         </div>
         <div class="row section bg-secondary noscroll" v-if="section != null">
@@ -30,6 +30,7 @@
                     v-for="(node, index) in this.nodes" 
                     :key="index" 
                     :node="node" 
+                    :journeyId="journey.id" 
                     v-model="path[index]"
                     @can-next="onCanNext(index)" @cannot-next="onCannotNext(index)"
                     @section-faded-out="onSectionFadedOut">

@@ -65,4 +65,16 @@ class UserController extends Controller
 
          return new QuestionResource($node);
     }
+
+    public function storeTerminalPath(StorePathRequest $request, Journey $journey, Node $node)
+    {
+        $response =  $request->get('response');
+
+        // merging the node to request object for future validation
+        $request->merge(['node' => $node]);
+
+        $this->dispatch(new StorePath($journey, $node,  $response));
+
+        return null;
+    }
 }

@@ -30,6 +30,7 @@ Route::get('journeys/{journey}', ['as' => 'api.journey.get', 'uses' => 'UserCont
 Route::get('journeys/{journey}/nodes', ['as' => 'api.journey.nodes.get', 'uses' => 'UserController@getJourneyNodes']);
 
 Route::post('journeys/{journey}/nodes/{node}', ['as' => 'api.user.store.path', 'uses' => 'UserController@storePath']);
+Route::post('journeys/{journey}/nodes/{node}/terminal', ['as' => 'api.user.store.path.terminal', 'uses' => 'UserController@storeTerminalPath']);
 
 Route::get('journeys/{journey}/questions/next', ['as' => 'api.user.next.path', 'uses' => 'UserController@getNextQuestion']);
 

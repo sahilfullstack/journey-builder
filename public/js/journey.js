@@ -49530,8 +49530,8 @@ module.exports = __webpack_require__(49);
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__fortawesome_fontawesome_svg_core__ = __webpack_require__(40);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fortawesome_free_solid_svg_icons__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fortawesome_vue_fontawesome__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__fortawesome_free_solid_svg_icons__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fortawesome_vue_fontawesome__ = __webpack_require__(128);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fortawesome_vue_fontawesome___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__fortawesome_vue_fontawesome__);
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -49563,6 +49563,7 @@ Vue.component('linker--weight', __webpack_require__(102));
 Vue.component('linker--height', __webpack_require__(107));
 Vue.component('linker--months', __webpack_require__(112));
 Vue.component('linker--biometrics', __webpack_require__(117));
+Vue.component('linker--terminal', __webpack_require__(122));
 
 /**
  * Icons
@@ -50089,6 +50090,7 @@ exports.push([module.i, "\n@-webkit-keyframes fadeInUp-data-v-187bd8d4 {\nfrom {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_smoothscroll_polyfill__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_smoothscroll_polyfill___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_smoothscroll_polyfill__);
+//
 //
 //
 //
@@ -50808,7 +50810,7 @@ var render = function() {
           _vm._l(this.nodes, function(node, index) {
             return _c("node", {
               key: index,
-              attrs: { node: node },
+              attrs: { node: node, journeyId: _vm.journey.id },
               on: {
                 "can-next": function($event) {
                   _vm.onCanNext(index)
@@ -50897,7 +50899,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "col-sm-12 col-md-8 offset-md-4" }, [
         _c("img", {
           attrs: {
-            src: "/images/shematters-logo-color.png",
+            src: "/images/shematters-logo-new-1.jpg",
             alt: "SheMatters",
             id: "icon"
           }
@@ -51045,11 +51047,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     props: {
         node: {
             type: Object,
+            required: true
+        },
+        journeyId: {
+            type: Number,
             required: true
         },
         value: {
@@ -51212,6 +51219,23 @@ var render = function() {
                     "linker--biometrics",
                     _vm._g(
                       { attrs: { linker: this.node.linker, value: _vm.value } },
+                      _vm.$listeners
+                    )
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              this.node.linker.type == "terminal"
+                ? _c(
+                    "linker--terminal",
+                    _vm._g(
+                      {
+                        attrs: {
+                          linker: this.node.linker,
+                          node: this.node,
+                          journeyId: this.journeyId,
+                          value: _vm.value
+                        }
+                      },
                       _vm.$listeners
                     )
                   )
@@ -53342,6 +53366,216 @@ if (false) {
 
 /***/ }),
 /* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(123)
+}
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(125)
+/* template */
+var __vue_template__ = __webpack_require__(126)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-d7609b8c"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/LinkerTerminal.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-d7609b8c", Component.options)
+  } else {
+    hotAPI.reload("data-v-d7609b8c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 123 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(124);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(3)("c6ce0f1e", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d7609b8c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./LinkerTerminal.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d7609b8c\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./LinkerTerminal.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(2)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 125 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    props: {
+        linker: {
+            type: Object,
+            required: true
+        },
+        node: {
+            type: Object,
+            required: true
+        },
+        journeyId: {
+            type: Number,
+            required: true
+        },
+        value: {
+            required: true
+        }
+    },
+    data: function data() {
+        return {
+            response: this.value || '',
+            seen: false
+        };
+    },
+
+    methods: {
+        saveTerminalResponse: function saveTerminalResponse() {
+            var _this = this;
+
+            axios.post('/api/journeys/' + this.journeyId + '/nodes/' + this.node.id + '/terminal', {
+                response: this.response
+            }).then(function (response) {
+                _this.seen = true;
+                _this.response = '';
+            }).catch(function (error) {
+                console.log("error occured");
+                console.log(error);
+            });
+        }
+    }
+});
+
+/***/ }),
+/* 126 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "row" }, [
+    _c("div", { staticClass: "col-sm-12" }, [
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.response,
+            expression: "response"
+          }
+        ],
+        staticClass: "box-input",
+        attrs: { type: "text" },
+        domProps: { value: _vm.response },
+        on: {
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.response = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      this.seen
+        ? _c("p", { staticStyle: { "font-style": "italic", color: "green" } }, [
+            _vm._v("Your response is submitted successfully")
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary btn-lg btn-block",
+          on: { click: _vm.saveTerminalResponse }
+        },
+        [_vm._v("Submit")]
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-d7609b8c", module.exports)
+  }
+}
+
+/***/ }),
+/* 127 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -55660,7 +55894,7 @@ var _iconsCache = {
 
 
 /***/ }),
-/* 123 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {(function (global, factory) {
