@@ -26,7 +26,8 @@ class GANodesSeeder extends Seeder
             'EMOTIONAL WELLBEING'       => Section::whereTitle('EMOTIONAL WELLBEING')->first()->id,
             'GYNAECOLOGICAL HISTORY'    => Section::whereTitle('GYNAECOLOGICAL HISTORY')->first()->id,
             'MEDICAL HISTORY'           => Section::whereTitle('MEDICAL HISTORY')->first()->id,
-            'PERSONAL'                  => Section::whereTitle('PERSONAL')->first()->id
+            'PERSONAL'                  => Section::whereTitle('PERSONAL')->first()->id,
+            'Thank You'                 => Section::whereTitle('Thank You')->first()->id
         ];
 
         $nodes = [
@@ -3873,7 +3874,7 @@ class GANodesSeeder extends Seeder
           [
             'tree_id' => $trees['ga'],
             'identifier' => 66,
-            'section_id' => null,
+            'section_id' => $sections['Thank You'],
             'data' => [
               'title' => 'Thank you for taking out time to compete this form. We truly value the information you have provided.',
               'body' => 'If you have any feedback on the survey please leave a comment below.',

@@ -68,6 +68,11 @@ class SectionsSeeder extends Seeder
                 'description' => '',
                 'color_code' => ''
             ],
+            [
+                'title' => 'Thank You',
+                'description' => '',
+                'color_code' => ''
+            ],
         ];
 
         foreach ($sections as $section) {
